@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
-  <head>
-    <meta charset="utf-8">
-    <title>Sincerly Project</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Sincerly Project</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
   <body>
+    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
     <div ui-view></div>
 
     <div ui-view="map"></div>
@@ -14,10 +18,12 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
     <script src="app.js"></script>
-      <script src="services/services.js"></script>
       <script src="list/list.js"></script>
+      <script src="services/services.js"></script>
       <script src="map/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEGjn8h8Sli-91BleDX6FjQqsSoZmWpws&"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEGjn8h8Sli-91BleDX6FjQqsSoZmWpws&">
+    </script>
   </body>
 </html>

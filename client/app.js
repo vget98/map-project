@@ -6,7 +6,8 @@ angular.module('myApp', [
   'app.services',
   'cordsList',
   'ui.router',
-  'map'
+  'map',
+  'xeditable'
 ])
 .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
   // For invalid urls redirect to main page
@@ -29,4 +30,7 @@ angular.module('myApp', [
       }
     });
 
+}])
+.run(['editableOptions', (editableOptions) => {
+  editableOptions.theme = 'bs3';
 }])
