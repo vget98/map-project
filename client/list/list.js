@@ -6,7 +6,11 @@ angular.module('cordsList', [])
     $scope.setlist = () => {
       data.loadData()
         .then((response) => {
-          console.log(response);
+          window.localStorage.setItem('listData', response);
+          $scope.cordslist = JSON.parse(window.localStorage.getItem('listData'));
+        })
+        .catch((err) => {
+          console.log(err);
         })
     };
   }])
