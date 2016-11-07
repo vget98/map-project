@@ -1,5 +1,5 @@
 angular.module('map', [])
-  .controller('mapController', ['$scope', 'NgMap', function($scope, NgMap) {
+  .controller('mapController', ['$scope', 'NgMap', '$rootScope', function($scope, NgMap, $rootScope) {
     const mc = this;
     mc.postitions = [];
     mc.map;
