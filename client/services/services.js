@@ -3,7 +3,7 @@ angular.module('app.services', [])
   .factory('data', ['$http', ($http) => {
 
     // Loads data from pct-data.json file
-    const.loadData = () => {
+    const loadData = () => {
       return $http.get('pct-data.json')
         .then((response) => {
           return response.data;
@@ -12,4 +12,5 @@ angular.module('app.services', [])
     return {
       loadData: loadData
     };
+
   }])
