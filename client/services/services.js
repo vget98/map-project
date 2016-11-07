@@ -6,7 +6,6 @@ angular.module('app.services', [])
     const.loadData = () => {
       return $http.get('pct-data.json')
         .then((response) => {
-          console.log(response);
           return response.data;
         })
     };
