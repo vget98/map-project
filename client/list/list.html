@@ -4,5 +4,17 @@
   <div>
     <button type="submit" name="cords" ng-click="setlist()">Load Data from Pct File</button>
   </div>
-  <div>{{cordslist}}</div>
+  <table>
+    <tr>
+      <th>Miles</th>
+      <th>Lat</th>
+      <th>Lon</th>
+    </tr ng-repeat="cords in cordslist track by $index">
+      <td>{{ cords[0] }}</td>
+      <td>{{ cords[1] }}</td>
+      <td>{{ cords[2] }}</td>
+    <tr>
+
+    </tr>
+  </table>
 </div>
