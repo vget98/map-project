@@ -3,15 +3,30 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngMap',
-  'ui.router'
+  'app.services',
+  'cordsList',
+  'ui.router',
+  'map'
 ])
 .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
   // For invalid urls redirect to main page
   $urlRouterProvider.otherwise('/');
 
   // Renders main index.html with two nested views the map and the list along with their controllers
-  $stateProvider('main', {
-    url: '/',
-    templateUrl: 'index.html'
-  })
+  $stateProvider
+    .state('main', {
+      url: '/',
+      templateUrl: 'index.html',
+      views: {
+        'map': {
+          templateUrl: 'map/map.html',
+          controller: 'mapController'
+        },
+        'list': {
+          templateUrl: 'list/list.html',
+          controller: 'cordsListController'
+        }
+      }
+    });
+
 }])
