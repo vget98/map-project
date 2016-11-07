@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <title>Sincerly Project</title>
@@ -7,11 +7,14 @@
   <body>
     <div ui-view></div>
 
+    <div ui-view="list"></div>
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
     <script src="app.js"></script>
       <script src="services/services.js"></script>
+      <script src="list/list.js"></script>
   </body>
 </html>
