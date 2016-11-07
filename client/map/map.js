@@ -14,6 +14,7 @@ angular.module('map', [])
         })
     };
 
+    // On intialization grab cords list from local storage
     mc.$onInit = () => {
       getMap();
       mc.postitions = JSON.parse(window.localStorage.getItem('listData'));

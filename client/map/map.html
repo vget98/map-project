@@ -1,3 +1,10 @@
-<div ng-controller="mapController as mc">
+<div ng-controller="mapController as mc" class="map-wrapper">
   <h1>Map</h1>
+  <ng-map
+    id="ng-map"
+    zoom="4"
+    center="37.7749, -122.4194"
+    map-type-id="ROADMAP">
+    <marker ng-repeat="c in mc.positions track by $index" position="{{ c[1] }}, {{ c[2] }}"></marker>
+  </ng-map>
 </div>
