@@ -14,6 +14,12 @@ angular.module('cordsList', [])
         })
     };
 
+    // Deletes coordinate from list, updates local stroage and broadcast to map controller tp update
+    $scope.delete = (index) => {
+      $scope.cordslist.splice(index, 1);
+      window.localStorage.setItem('listData', JSON.stringify($scope.cordslist));
+    };
+
     // Event listener for any updates to local storage
     $rootScope.$on('updateList', () => {
       $scope.cordslist = JSON.parse(window.localStorage.getItem('listData'));
