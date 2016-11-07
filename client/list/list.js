@@ -13,4 +13,10 @@ angular.module('cordsList', [])
           console.log(err);
         })
     };
+
+    // Event listener for any updates to local storage
+    $rootScope.$on('updateList', () => {
+      $scope.cordslist = JSON.parse(window.localStorage.getItem('listData'));
+    });
+
   }])
