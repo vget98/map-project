@@ -8,6 +8,9 @@ angular.module('cordsList', [])
         .then((response) => {
           window.localStorage.setItem('listData', response);
           $scope.cordslist = JSON.parse(window.localStorage.getItem('listData'));
+
+          // Broadcast to map controller to update map data
+          $rootScope.$broadcast('updateMap');
         })
         .catch((err) => {
           console.log(err);
@@ -23,6 +26,7 @@ angular.module('cordsList', [])
     // Event listener for any updates to local storage
     $rootScope.$on('updateList', () => {
       $scope.cordslist = JSON.parse(window.localStorage.getItem('listData'));
+      $rootScope.$broadcast('updateMap');
     });
 
   }])

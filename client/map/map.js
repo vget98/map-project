@@ -30,4 +30,8 @@ angular.module('map', [])
       $rootScope.$broadcast('updateList');
     };
 
+    // Event listener when list data gets updated to also update map
+    $rootScope.$on('updateMap', () => {
+      mc.positions = JSON.parse(window.localStorage.getItem('listData'));
+    });
   }])
