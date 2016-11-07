@@ -1,0 +1,31 @@
+{
+  "name": "patrick-project",
+  "version": "1.0.0",
+  "description": "Project for Engineering Candidate Patrick Truong",
+  "main": "index.js",
+  "engines": {
+    "node": "6.2.2",
+    "npm": "3.9.5"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "poststart": "bower install",
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sincerely/patrick-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sincerely/patrick-project/issues"
+  },
+  "homepage": "https://github.com/sincerely/patrick-project#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0"
+  }
+}
