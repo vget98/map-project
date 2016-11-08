@@ -22,7 +22,7 @@ server.listen(port, () => console.log("Listening on port", port));
 // Created endpoint for get requst to grab data from pct-data.json
 // Had to do server side to use the fs module
 app.get('/pct-data.json', (req, res) => {
-  const data = fs.readFileSync(testPath, 'utf-8');
+  const data = fs.readFileSync(listPath, 'utf-8');
   res.json(data);
 });
 
