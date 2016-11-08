@@ -8,8 +8,8 @@
     "npm": "3.9.5"
   },
   "scripts": {
+    "postinstall": "bower install",
     "prestart": "npm install",
-    "poststart": "bower install",
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
