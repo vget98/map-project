@@ -5,12 +5,10 @@ Project for Engineering Candidate Patrick Truong
 ## To Run Project
 
 ```sh
-npm install
-bower install
 npm start
 
-Deployed version (incase you don't want to download):
-(https://sheltered-sands-94421.herokuapp.com/)
+Deployed version (incase you do not want to download):
+[here](https://sheltered-sands-94421.herokuapp.com/)
 
 ```
 
