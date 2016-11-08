@@ -22,9 +22,8 @@ angular.module('map', [])
 
     // On click on map add markers to map and update local storage, also find closest marker
     mc.addMarker = (event) => {
-      let closestMarker = findClosestMarker(event);
       let ll = event.latLng;
-      mc.positions.push(['Add', ll.lat(), ll.lng(), closestMarker]);
+      mc.positions.push(['Add', ll.lat(), ll.lng()]);
       window.localStorage.setItem('listData', JSON.stringify(mc.positions));
       // Broadcast to lost controller to pull new updated data from local storage
       $rootScope.$broadcast('updateList');
