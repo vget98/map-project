@@ -3,6 +3,7 @@
   <h5>Closest Markers will only show for extra added markers (extra markers display on bottom of list)</h5>
   <div>
     <button type="submit" name="cords" ng-click="setlist()">Load Data from Pct File</button>
+    <label>Search by Any: <input ng-model="searchText"></label>
     <h5>Data takes a little while to load</h5>
   </div>
   <table>
@@ -12,7 +13,7 @@
       <th>Lon</th>
       <th>Closest Marker</th>
     </tr>
-    <tr ng-repeat="cords in cordslist track by $index">
+    <tr ng-repeat="cords in cordslist | filter:searchText track by $index">
       <td editable-text="cords[0]" e-label="dist">{{ cords[0] }}</td>
       <td editable-text="cords[1]" e-label="Lat">{{ cords[1] }}</td>
       <td editable-text="cords[2]" e-label="Lng">{{ cords[2] }}</td>
