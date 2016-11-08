@@ -8,6 +8,10 @@ Project for Engineering Candidate Patrick Truong
 npm install
 bower install
 npm start
+
+Deployed version (incase you don't want to download):
+(https://sheltered-sands-94421.herokuapp.com/)
+
 ```
 
 Create a simple web app using AngularJS (or similar framework) to display and edit a list of lat/lon coordinates representing [Pacific Crest Trail](http://en.wikipedia.org/wiki/Pacific_Crest_Trail) mile markers on a Google Map.
