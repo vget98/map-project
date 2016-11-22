@@ -1,8 +1,8 @@
-<div ng-controller="cordsListController" class="cords-list">
+<div ng-controller="cordsListController as cl" class="cords-list">
   <h1>List</h1>
   <h5>Closest Markers will only show for extra added markers (extra markers display on bottom of list)</h5>
   <div>
-    <button type="submit" name="cords" ng-click="setlist()">Load Data from Pct File</button>
+    <button type="submit" name="cords" ng-click="cl.setlist()">Load Data from Pct File</button>
     <label>Search by Any: <input ng-model="searchText"></label>
     <h5>Data takes a little while to load</h5>
   </div>
@@ -13,16 +13,16 @@
       <th>Lon</th>
       <th>Closest Marker</th>
     </tr>
-    <tr ng-repeat="cords in cordslist | filter:searchText track by $index">
+    <tr ng-repeat="cords in cl.cordslist | filter:searchText track by $index">
       <td editable-text="cords[0]" e-label="dist">{{ cords[0] }}</td>
       <td editable-text="cords[1]" e-label="Lat">{{ cords[1] }}</td>
       <td editable-text="cords[2]" e-label="Lng">{{ cords[2] }}</td>
       <td>{{ cords[3] }}</td>
       <td>
-        <input type="button" ng-click="edit(cords, $index)" value="Save Edit">
+        <input type="button" ng-click="cl.edit(cords, $index)" value="Save Edit">
       </td>
       <td>
-        <input type="button" data-ng-click="delete($index)" value="Delete">
+        <input type="button" data-ng-click="cl.delete($index)" value="Delete">
       </td>
     </tr>
   </table>
