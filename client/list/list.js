@@ -13,9 +13,12 @@ angular.module(`cordsList`, [])
           // Broadcast to map controller to update map data
           $rootScope.$broadcast(`updateMap`);
         })
-        .catch((err) => {
-          console.log(err);
-        })
+        .catch((err) => console.log(err));
+    };
+
+    // On list intialization set map markers and coordinates list
+    cl.$onInit = () => {
+      cl.setlist();
     };
 
     // Saves edit to local storage and updates map

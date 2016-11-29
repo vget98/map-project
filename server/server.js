@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const http = require("http");
-const fs = require(`fs`);
+const fs = require("fs");
 
 // Path to the pct-data.sjon files used for fs read file
 const listPath = __dirname + `/../pct-data.json`;

@@ -5,10 +5,9 @@ angular.module('app.services', [])
     // Loads data from pct-data.json file
     const loadData = () => {
       return $http.get('pct-data.json')
-        .then((response) => {
-          return response.data;
-        })
+        .then((response) => response.data);
     };
+
     return {
       loadData: loadData
     };
