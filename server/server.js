@@ -6,6 +6,7 @@ const fs = require("fs");
 // Path to the pct-data.sjon files used for fs read file
 const listPath = __dirname + `/../pct-data.json`;
 const testPath = __dirname + `/../test.json`;
+const data = fs.readFileSync(testPath, `utf-8`);
 
 const app = express();
 const server = http.createServer(app);
@@ -22,7 +23,6 @@ server.listen(port, () => console.log("Listening on port", port));
 // Created endpoint for get requst to grab data from pct-data.json
 // Had to do server side to use the fs module
 app.get(`/pct-data.json`, (req, res) => {
-  const data = fs.readFileSync(testPath, `utf-8`);
   res.json(data);
 });
 
